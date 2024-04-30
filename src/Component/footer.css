@@ -59,7 +59,7 @@
     background-color: #e6f1fc;
     display: flex;
    
-    transform: translateY(-15rem);
+
     flex-direction: column;
     justify-content: center;
     border-radius:5px ;
@@ -86,13 +86,10 @@
     pointer-events: none
 }
 .visible{
-    transform: translateY(+15rem);
+  
     opacity: 1;
     pointer-events: initial;
-    -webkit-transform: translateY(+15rem);
-    -moz-transform: translateY(+15rem);
-    -ms-transform: translateY(+15rem);
-    -o-transform: translateY(+15rem);
+   
 }
 
 .ModalCreat input{

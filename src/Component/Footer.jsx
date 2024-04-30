@@ -1,7 +1,7 @@
 import Icon from "./SvgIcon";
 import './footer.css'
 import { toast } from "react-toastify";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 export default  function Footer(){
 let [Create , setCreate]=useState(false)
 let [value , setValue]=useState("")
@@ -14,13 +14,36 @@ let [Todos , setTodos]=useState([])
     }
     function addTodo(event){
     event.preventDefault();
-    if(value.length===0){
+ 
+   if(Todos){
+    let md= Todos.some(item=>item===value)
+    console.log(md)
+    if(md){
+     
+      setValue("")
+      
+      return true
+    }else{
+      if(value.length===0){
         toast.success("success") 
     }else{
+    
         setTodos([...Todos,value])
        setValue("")
+       if(value.length===0){
+        toast.success("success") 
+    }else{
+    
+        setTodos([...Todos,value])
+       setValue("")
+       setCreate(false)
 
     }
+
+    }
+    }
+   }
+    
    
 
     
@@ -34,6 +57,17 @@ let [Todos , setTodos]=useState([])
       setValue(newTodo)
        
     }
+
+    useEffect(()=>{
+
+      const close=(e)=>{
+        console.log(e.keyCode)
+        if(e.keyCode===27 || e.keyCode===13){
+          setCreate(false)
+        }
+      }
+       window.addEventListener("keydown" ,close)
+    },[])
     return(
         <>
 
