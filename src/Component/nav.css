@@ -1,0 +1,27 @@
+nav{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-left:2rem ;
+   padding-right: 2rem;
+   margin-top: 1rem;
+}
+
+.svgReact{
+    color:#1D88FF ;
+    font-size: 1.5rem;
+}
+.data{
+    margin-bottom: 3rem;
+}
+
+.calender{
+    margin-top: 3rem;
+    padding-left: 2rem;
+    display: flex;
+    justify-content:center ;
+    flex-direction: column;
+    color:var(--gray) ;
+    font-family: "comfortaa" !important;
+}
+

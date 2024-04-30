@@ -1,0 +1,31 @@
+* , *::after , *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark:#001219;
+    --main-white:#f0f8ff;
+    --white:#ffffff;
+    --main-red:#d90429;
+    --primary:#1D88FF;
+    --gray:#9D9D9D;
+    --stoke:#D4D4D4;
+    --secodColor:#E9F0F8;
+
+
+}
+
+body{
+    background-color: var(--main-white);
+    font-family: "comfortaa" !important;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
