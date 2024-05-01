@@ -2,16 +2,18 @@ import { useState } from 'react';
 import './nav.css';
 import Logo from './Logo'
 import { FiAlignJustify } from "react-icons/fi";
-function getDate() {
-  const today = new Date();
-  const month = today.getMonth() + 1;
-  const year = today.getFullYear();
-  const date = today.getDate();
-  return `${month}/${date}/${year}`;
-}
+
 
 export default function Nav(){
-    const[currentDate , setCurrentDate]=useState(getDate())
+  const today = new Date();
+  const month = today.getMonth()+1 ;
+  
+  const day = today.getDate();
+  const formattedDate = `${day < 10 ? '0' : ''}${day}`;
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const months = ['January', 'February', 'March', 'April', 'May', 'Juan', 'July','August','September','October','November','December'];
+  const dayOfWeek = days[today.getDay()];
+  const month1 = months[today.getMonth()];
     
     return(
         <>
@@ -27,7 +29,9 @@ export default function Nav(){
         </nav>
         <div className="calender">
           <p>Today</p>
-          <p className="data">{currentDate}</p>
+        
+
+        <p className="calender-item" >{month1} {formattedDate} {dayOfWeek}</p>
         </div>
        
         </>

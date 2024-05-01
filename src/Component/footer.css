@@ -21,12 +21,14 @@
 
 .titleForm{
     color: var(--primary);
+    font-family: "Roboto";
+    font-weight: 600;
 }
 
 .todoItem{
     width: 18.5rem;
     background-color:var(--white);
-    border: 1px solid var(--gray);
+    border: 2px solid var(--stoke);
     height: 2.5rem;
     border-radius: 5px;
     display: flex;
@@ -56,9 +58,9 @@
     transition: opacity 250ms;
     width: 19rem;
     height: 11rem;
-    background-color: #e6f1fc;
+    background-color:var(--secodColor);
     display: flex;
-   
+    box-shadow: 0 0 19px rgba(168, 172, 185, 0.3);
 
     flex-direction: column;
     justify-content: center;
@@ -99,13 +101,15 @@
     color: 1px solid var(--gray);
     margin-top: 1.7rem;
     margin-bottom: 1rem;
-    outline: none;
+    outline: none; 
+    padding-left: 7px;
 
 }
 
 .btnForm{
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
 }
 
 .addBtnCreateTodo,
@@ -115,12 +119,33 @@
     width: 7.2rem;
     height: 2rem;
     border-radius: 5px;
+    transition: all ease-in-out 200ms;
+    -webkit-transition: all ease-in-out 200ms;
+    -moz-transition: all ease-in-out 200ms;
+    -ms-transition: all ease-in-out 200ms;
+    -o-transition: all ease-in-out 200ms;
+}
 
+.addBtnCreateTodo:hover{
+    background-color: blue;
+    
+    border: 1.3px solid var(--primary);  
+}
+.canceleBtnCreateTodo{
+    background-color: var(--white);
+    color: var(--primary); 
+    border: 1.3px solid var(--primary);
 }
 input[type='checkbox']{
-    color: blue !important;
+   
+    accent-color:  var(--primary) !important;
     width: 1.2rem;
-    background-color: blue !important;
-    border: 2px solid blue;
+    
+}
+
+
+.todoCompleteLine{
+text-decoration: line-through;
+color: var(--primary);
 }
 
